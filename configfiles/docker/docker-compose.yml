@@ -1,0 +1,21 @@
+version: '2.3'
+
+services:
+  python:
+    runtime: nvidia
+    image: sandbox/da/mcd
+    volumes:
+      - ${PROJECT_ROOT}:${PROJECT_ROOT}
+      - ${PYTORCH_ROOT}:${PYTORCH_ROOT}
+    environment:
+      CUDA_VISIBLE_DEVICES: "0,1"  # ???
+#      CUDA_VISIBLE_DEVICES: "2,3"  # overfit mnist
+#      CUDA_VISIBLE_DEVICES: "4,5"   # momentum sgd 2e-9
+#      CUDA_VISIBLE_DEVICES: "6,7"   # momentum sgd 2e-9
+
+# 0タブ: どっちも
+# 2タブ: loss_cを平均する
+# 3タブ: modelのfreeze
+#  3タブ: 最新版
+# 4タブ: どっちも+2e-6のSGD
+
