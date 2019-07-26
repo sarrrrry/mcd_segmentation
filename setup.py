@@ -1,10 +1,10 @@
 from setuptools import setup
 
 setup(
-    name='domain_adaptation_mcd',
+    name='mcd_segmentation',
     version='0.0.1',
-    packages=['mcd'],
-    url='git@github.com:sarrrrry/domain_adaptation_mcd.git',
+    packages=['mcd', 'mcd.datasets', 'mcd.networks', 'mcd.networks.resnet'],
+    url='git@github.com:sarrrrry/mcd_segmentation.git',
     license='',
     author='sarrrrry',
     author_email='sarrrrry.sarrrrry@gmail.com',
